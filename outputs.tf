@@ -1,3 +1,7 @@
+output "spring_cloud_api_portal_custom_domains_id" {
+  description = "Map of id values across all spring_cloud_api_portal_custom_domains, keyed the same as var.spring_cloud_api_portal_custom_domains"
+  value       = { for k, v in azurerm_spring_cloud_api_portal_custom_domain.spring_cloud_api_portal_custom_domains : k => v.id }
+}
 output "spring_cloud_api_portal_custom_domains_name" {
   description = "Map of name values across all spring_cloud_api_portal_custom_domains, keyed the same as var.spring_cloud_api_portal_custom_domains"
   value       = { for k, v in azurerm_spring_cloud_api_portal_custom_domain.spring_cloud_api_portal_custom_domains : k => v.name }
